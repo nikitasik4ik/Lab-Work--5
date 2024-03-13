@@ -2,7 +2,7 @@ version: "3.9"
 services:
   postgres:
     container_name: postgres_container
-    image:  gchurakov/pets-service-postgres:latest
+    image:  nikitasik4ik/pets-service-postgres:latest
     environment:
       POSTGRES_DB: "habrdb"
       POSTGRES_USER: "habrpguser"
@@ -31,7 +31,7 @@ services:
 
   pgadmin:
     container_name: pgadmin_container
-    image:  gchurakov/pets-service-pgadmin:latest
+    image:  nikitasik4ik/pets-service-pgadmin:latest
     environment:
       PGADMIN_DEFAULT_EMAIL: "postgres@postgres.com"
       PGADMIN_DEFAULT_PASSWORD: "postgres"
@@ -55,7 +55,7 @@ services:
 
   backend:
     container_name: backend_container
-    image: gchurakov/pets-service-backend:latest
+    image: nikitasik4ik/pets-service-backend:latest
     expose:
       - "8080"
     volumes:
@@ -78,7 +78,7 @@ services:
 
   nginx:
     container_name: nginx_container
-    image: gchurakov/pets-service-nginx:latest
+    image: nikitasik4ik/pets-service-nginx:latest
     ports:
       - "80:80"
     volumes:
