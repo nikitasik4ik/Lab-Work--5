@@ -44,8 +44,8 @@ jobs:
         
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         
-        docker tag pets-service-backend ${{ secrets.DOCKER_USERNAME }}/lab-work--5-backend:latest
-        docker tag pets-service-nginx ${{ secrets.DOCKER_USERNAME }}/lab-work--5-nginx:latest
+        docker tag lab-work--5-backend ${{ secrets.DOCKER_USERNAME }}/lab-work--5-backend:latest
+        docker tag lab-work--5-nginx ${{ secrets.DOCKER_USERNAME }}/lab-work--5-nginx:latest
         docker tag dpage/pgadmin4:7.2 ${{ secrets.DOCKER_USERNAME }}/lab-work--5-pgadmin:latest
         docker tag postgres:14.8-alpine3.18 ${{ secrets.DOCKER_USERNAME }}/lab-work--5-postgres:latest
         
